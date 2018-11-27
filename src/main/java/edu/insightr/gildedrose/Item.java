@@ -41,7 +41,7 @@ public abstract class Item implements IVisitable {
                 '}';
     }
 
-    public void accepte(IVisitor v){
+    public void accept(IVisitor v){
         v.visit(this);
     }
 }
