@@ -88,6 +88,38 @@ public class Inventory {
         }
     }
 
+    public void updateInventory(){
+        Inventory inventory = new Inventory();
+        for(int i = 0; i < items.length ; i++)
+        {
+            String t = items[i].getName();
+            if(t == "Aged Brie")
+            {
+                StrategyA.update(items[i]);
+            }
+            if(t == "Backstage passes to a TAFKAL80ETC concert")
+            {
+                StrategyB.update(items[i]);
+            }
+            if(t == "Conjured Mana Cake")
+            {
+                StrategyC.update(items[i]);
+            }
+            if(t == "+5 Dexterity Vest")
+            {
+                StrategyD.update(items[i]);
+            }
+            if(t == "Elixir of the Mongoose")
+            {
+                StrategyE.update(items[i]);
+            }
+            if(t == "Sulfuras, Hand of Ragnaros")
+            {
+                StrategyS.update(items[i]);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         for (int i = 0; i < 10; i++) {
